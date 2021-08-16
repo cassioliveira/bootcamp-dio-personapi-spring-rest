@@ -2,6 +2,7 @@ package br.com.cassioliveira.personapi.controller;
 
 import br.com.cassioliveira.personapi.dto.MessageResponseDTO;
 import br.com.cassioliveira.personapi.dto.PersonDTO;
+import br.com.cassioliveira.personapi.exceptions.PersonNotFoundException;
 import br.com.cassioliveira.personapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,7 +30,13 @@ public class PersonController {
     }
 
     @GetMapping
-    public List<PersonDTO> listAll(){
+    public List<PersonDTO> listAll() {
         return personService.listAll();
     }
+
+    @GetMapping("/{id}")
+    public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
+        return personService.findById(id);
+    }
+
 }
