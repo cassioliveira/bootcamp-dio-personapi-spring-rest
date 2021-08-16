@@ -1,4 +1,4 @@
-# Bootcamp GFT Start #2: Desenvolvendo um sistema de gerenciamento de pessoas com API REST e Spring Boot
+# Desenvolvendo um sistema de gerenciamento de pessoas com API REST e Spring Boot
 
 Neste sistema foi desenvolvido uma API básica de cadastro de pessoa, utilizando algumas tecnologias e ferramentas:
 
